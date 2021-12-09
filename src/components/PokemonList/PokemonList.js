@@ -17,15 +17,13 @@ export default function PokemonList({ pokemon, currentPage, setCurrentPage, setL
   return (
     <div className="pokemon-list">
       {pokemon.map((poke) => (
-        <>
-          <div className="pokemon-card">
-            <p key={poke.id}>{poke.pokemon}</p>
-            <img key={poke.url_image} src={poke.url_image} height={100} />
-            <p key={poke.species_id}>Species ID: {poke.species_id}</p>
-            <p key={poke.type_1}>Type: {poke.type_1}</p>
-            <p key={poke.generation_id}>Generation: {poke.generation_id}</p>
-          </div>
-        </>
+        <div key={poke.id} className="pokemon-card">
+          <p>{poke.pokemon}</p>
+          <img src={poke.url_image} height={100} />
+          <p>ID: {poke.id}</p>
+          <p>Type: {poke.type_1}</p>
+          <p>Generation: {poke.generation_id}</p>
+        </div>
       ))}
       <button onClick={previousPage}>Previous Page</button>
       <div>Page: {currentPage}</div>

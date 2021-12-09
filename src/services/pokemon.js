@@ -1,8 +1,10 @@
-export async function getPokemon(query, currentPage) {
+export async function getPokemon(query, currentPage, order) {
   const params = new URLSearchParams();
 
   params.set('pokemon', query);
   params.set('page', currentPage);
+  params.set('sort', 'pokemon');
+  params.set('direction', order);
   //search and sort params go here
 
   const resp = await fetch(
