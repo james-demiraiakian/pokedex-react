@@ -2,25 +2,40 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import PokemonList from './components/PokemonList/PokemonList';
 import Search from './components/Search/Search';
-import { getPokemon } from './services/pkemon';
+import { getPokemon, getType } from './services/pkemon';
 
 function App() {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');
-  const [order, setOrder] = useState('asc');
+  const [type, setType] = useState([]);
+  const [selctedType, setSelectedType] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getPokemon(query);
+      const data = await getPokemon(query, currentPage);
       setPokemon(data.results);
-      console.log(data.results);
+      // console.log('All Data');
+      console.log(data);
+      // console.log(pokemon);
     };
     fetchData();
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
-  }, [query]);
+    }, 1000);
+  }, [query, loading, currentPage]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getType();
+      setType(data.results);
+      // console.log('Type Data');
+      // console.log(data);
+      // console.log(type);
+    };
+    fetchData();
+  }, []);
 
   if (loading) return <h1>LOADING</h1>;
 
@@ -28,7 +43,13 @@ function App() {
     <div className="App">
       <header className="App-header" />
       <Search query={query} setQuery={setQuery} setLoading={setLoading} />
-      <PokemonList pokemon={pokemon} />
+      <PokemonList
+        pokemon={pokemon}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        loading={loading}
+        setLoading={setLoading}
+      />
     </div>
   );
 }

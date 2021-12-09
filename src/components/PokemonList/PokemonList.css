@@ -1,0 +1,11 @@
+.pokemon-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pokemon-card {
+  border: 1px solid black;
+  margin: 20px;
+  width: 250px;
+}
