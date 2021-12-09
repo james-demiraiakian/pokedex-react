@@ -1,25 +1,21 @@
-# Alchemy React Base Template
+# Tasks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### [x] See a loading state while data is being fetched on page load
 
-Use this template for all your "from scratch" deliverables. To start, simply run
+### [x] See a list of characters when the page loads
 
-- `npm install`
-- `npm start`
+### [] Filter the data retrieved
 
-## Available Scripts
+### [] Conditionally render a loading state
 
-In the project directory, you can run:
+### [x] Make an api request with fetch and useEffect when page loads
 
-### `npm start`
+### [] Add a key to each item rendered from data fetched
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### [] Update state with useEffect using empty dependency array
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### [] Update state with useEffect conditionally using dependency array
 
-### `npm test`
+### [] Snapshot testing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### [] Deployed on Netlify with passing CI
