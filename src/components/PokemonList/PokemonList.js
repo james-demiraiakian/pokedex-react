@@ -5,7 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { minWidth } from '@mui/system';
 
 export default function PokemonList({ pokemon, currentPage, setCurrentPage, setLoading }) {
   const nextPage = () => {
