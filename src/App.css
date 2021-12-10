@@ -3,4 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
+  background-color: lightgrey;
+  align-items: center;
+  justify-content: center;
 }

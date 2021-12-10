@@ -4,8 +4,13 @@
   flex-wrap: wrap;
 }
 
-.pokemon-card {
+image {
+  width: 200px;
+  height: 200px;
+}
+
+/* .pokemon-card {
   border: 1px solid black;
   margin: 20px;
   width: 250px;
-}
+} */
