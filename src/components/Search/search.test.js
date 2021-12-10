@@ -1,9 +1,18 @@
 import { render } from '@testing-library/react';
 import Search from './Search.js';
 
-test('', () => {
+test('testing Search', () => {
   const container = render(
-    <div>query, setQuery, setLoading, order, setOrder, selectedType, setSelectedType, type</div>
+    <Search
+      query="Query"
+      setQuery="setQuery"
+      setLoading="setLoading"
+      order="order"
+      setOrder="setOrder"
+      slectedType="selectedType"
+      setSelectedType="setSelectedType"
+      type={['type', 'other type', 'also some more type']}
+    />
   );
-  expect(container).toMatchSnapshot();
+  expect(container).toMatchSnapshot;
 });

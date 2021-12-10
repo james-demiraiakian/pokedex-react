@@ -4,7 +4,7 @@ import PokemonList from './PokemonList';
 test('testing Search', () => {
   const container = render(
     <PokemonList
-      pokemon="pokemon"
+      pokemon={['pikachu', 'abra', 'amaura']}
       currentPage="currentPage"
       setCurrentPage="setCurrentPage"
       setLoading="setLoading"
