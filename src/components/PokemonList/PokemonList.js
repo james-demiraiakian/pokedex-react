@@ -21,8 +21,9 @@ export default function PokemonList({ pokemon, currentPage, setCurrentPage, setL
           <p>{poke.pokemon}</p>
           <img src={poke.url_image} height={100} />
           <p>ID: {poke.id}</p>
-          <p>Type: {poke.type_1}</p>
-          <p>Generation: {poke.generation_id}</p>
+          <p>Type 1: {poke.type_1}</p>
+          {poke.type_2 !== 'NA' && <p>Type 2: {poke.type_2}</p>}
+          {poke.generation_id !== 'NA' && <p>Generation: {poke.generation_id}</p>}
         </div>
       ))}
       <button onClick={previousPage}>Previous Page</button>
