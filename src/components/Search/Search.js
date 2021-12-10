@@ -1,4 +1,5 @@
 import React from 'react';
+import './Search.css';
 
 export default function Search({
   query,
@@ -11,7 +12,7 @@ export default function Search({
   type,
 }) {
   return (
-    <div>
+    <div className="search">
       <input
         type="text"
         placeholder="Search"

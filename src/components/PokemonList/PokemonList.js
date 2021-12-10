@@ -54,11 +54,13 @@ export default function PokemonList({ pokemon, currentPage, setCurrentPage, setL
           </Card>
         ))}
       </div>
-      <Button onClick={previousPage}>Previous Page</Button>
-      <Typography variant="body2" color="text.secondary">
-        Page: {currentPage}
-      </Typography>
-      <Button onClick={nextPage}>Next Page</Button>
+      <div className="bottom-buttons">
+        <Button onClick={previousPage}>Previous Page</Button>
+        <Typography variant="body2" color="text.secondary">
+          Page: {currentPage}
+        </Typography>
+        <Button onClick={nextPage}>Next Page</Button>
+      </div>
     </>
   );
 }
