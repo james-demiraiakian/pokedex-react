@@ -4,18 +4,18 @@
 
 ### [x] See a list of characters when the page loads
 
-### [] Filter the data retrieved
+### [x] Filter the data retrieved
 
-### [] Conditionally render a loading state
+### [x] Conditionally render a loading state
 
 ### [x] Make an api request with fetch and useEffect when page loads
 
-### [] Add a key to each item rendered from data fetched
+### [x] Add a key to each item rendered from data fetched
 
-### [] Update state with useEffect using empty dependency array
+### [x] Update state with useEffect using empty dependency array
 
-### [] Update state with useEffect conditionally using dependency array
+### [x] Update state with useEffect conditionally using dependency array
 
-### [] Snapshot testing
+### [x] Snapshot testing
 
 ### [] Deployed on Netlify with passing CI
